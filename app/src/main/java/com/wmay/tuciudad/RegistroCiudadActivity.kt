@@ -14,8 +14,8 @@ class RegistroCiudadActivity : AppCompatActivity() {
         val registrarButton: Button = findViewById(R.id.registrar_button)
         val nombreEditText: EditText = findViewById(R.id.nombre_editTextTextPersonName)
         val infoTextView: TextView = findViewById(R.id.info_text_View)
-        val
-                registrarButton.setOnClickListener {
+
+        registrarButton.setOnClickListener {
             val nombre = nombreEditText.text
             infoTextView.text = nombre
 
