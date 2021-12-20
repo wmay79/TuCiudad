@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TuCiudad</string>
     <string name="cali">Cali</string>
+    <string name="informaciom">Información</string>
 </resources>
