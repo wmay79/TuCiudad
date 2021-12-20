@@ -7,4 +7,5 @@
     <string name="registrar">Registrar</string>
     <string name="nombre">Nombre Ciudad</string>
     <string name="calificacion">Calificación</string>
+    <string name="nombre_info">\"Nombre: %s, Puntuación: %f"</string>
 </resources>
