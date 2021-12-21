@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 
 class ListSitiosActivity2 : AppCompatActivity() {
 
@@ -17,8 +18,8 @@ class ListSitiosActivity2 : AppCompatActivity() {
 
         List_sitios_recycler_view = findViewById(R.id.list_sitios_recycler_view)
 
-        ListSitios = crearMockPuntos()
-
+     //   ListSitios = crearMockPuntos()
+        ListSitios = loadMocksitiosFromJson()
         sitiosAdapter = SitiosAdapter(ListSitios)
 
         List_sitios_recycler_view.apply {
@@ -27,6 +28,13 @@ class ListSitiosActivity2 : AppCompatActivity() {
             setHasFixedSize(false)
         }
 
+    }
+
+    private fun loadMocksitiosFromJson(): ArrayList<Puntos> {
+
+        var sitiosString: String = applicationContext.assets.open("sitios.json").bufferedReader().use {it.readText()}
+        val gson = Gson()
+        val data = gson.fromJson(sitiosString,Puntos::class.java)
     }
 
     private fun crearMockPuntos(): ArrayList<Puntos> { //Mock prueba internet
