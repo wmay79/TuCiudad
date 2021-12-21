@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class SitiosAdapter(
     private val sitiosList: ArrayList<Puntos>
@@ -30,13 +31,13 @@ class SitiosAdapter(
         private var nameTextView: TextView = itemView.findViewById(R.id.name_textView)
         private var scoreTextView: TextView = itemView.findViewById(R.id.score_textView)
         private var descriptionTextView: TextView = itemView.findViewById(R.id.description_textView)
-        private var pictureTextView: ImageView = itemView.findViewById(R.id.picture_imageView)
+        private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_imageView)
 
         fun bind(puntos: Puntos) {
             nameTextView.text = puntos.name
             scoreTextView.text = puntos.score
             descriptionTextView.text = puntos.description
-            Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(imageView);
+            Picasso.get().load(puntos.urlpictures).into(pictureImageView);
 
         }
     }
