@@ -15,19 +15,19 @@
     </style>
 
     <style name="Texto_titulo">
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:textColor">@color/purple_700</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Texto_normal">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/teal_200</item>
         <item name="android:textStyle">italic</item>
     </style>
 
     <style name="Texto_subtitulo">
-        <item name="android:textSize">24dp</item>
+        <item name="android:textSize">15dp</item>
         <item name="android:textColor">@color/purple_500</item>
         <item name="android:textStyle">bold</item>
     </style>

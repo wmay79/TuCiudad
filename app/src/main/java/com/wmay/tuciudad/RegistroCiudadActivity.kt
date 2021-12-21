@@ -24,8 +24,11 @@ class RegistroCiudadActivity : AppCompatActivity() {
             val descripcion = ""
             infoTextView.text = getString(R.string.nombre_info, nombre, puntuacion)
 
+            val punto = Puntos (nombre, puntuacion, descripcion, )
+
             val intent = Intent(this,MainActivity::class.java)
-              startActivity(intent)
+            intent.putExtra("nombre",nombre)
+            startActivity(intent)
         }
 
     }
