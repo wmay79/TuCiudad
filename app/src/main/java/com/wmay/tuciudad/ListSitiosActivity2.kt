@@ -3,6 +3,7 @@ package com.wmay.tuciudad
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ListSitiosActivity2 : AppCompatActivity() {
@@ -21,13 +22,14 @@ class ListSitiosActivity2 : AppCompatActivity() {
 
         sitiosAdapter = SitiosAdapter(ListSitios)
 
-        List_sitios_recycler_view.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                DividerItemDecoration.VERTICAL
-            )
-        )
-        List_sitios_recycler_view.adapter = sitiosAdapter
+        List_sitios_recycler_view.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = sitiosAdapter
+            setHasFixedSize(false)
+        }
+
+
+
 
     }
 
