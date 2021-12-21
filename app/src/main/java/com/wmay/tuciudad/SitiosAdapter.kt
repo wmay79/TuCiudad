@@ -34,8 +34,8 @@ class SitiosAdapter(
         private var pictureTextView: ImageView = itemView.findViewById(R.id.picture_imageView)
 
         fun bind(puntos: Puntos) {
-           nameTextView.text = puntos.name
-            scoreTextView.text = puntos.score
+            nameTextView.text = puntos.name
+            scoreTextView.text = puntos.score.toString()
             descriptionTextView.text = puntos.description
             //picture
 
