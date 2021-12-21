@@ -1,5 +1,6 @@
 package com.wmay.tuciudad
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,8 +21,11 @@ class RegistroCiudadActivity : AppCompatActivity() {
         registrarButton.setOnClickListener {
             val nombre : String= nombreEditText.text.toString()
             val puntuacion : Float = puntuacionEditText.text.toString().toFloat()
+            val descripcion = ""
             infoTextView.text = getString(R.string.nombre_info, nombre, puntuacion)
 
+            val intent = Intent(this,MainActivity::class.java)
+              startActivity(intent)
         }
 
     }
