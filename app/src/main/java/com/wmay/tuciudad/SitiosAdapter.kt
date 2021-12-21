@@ -13,8 +13,7 @@ class SitiosAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_view_sitio_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_view_sitio_item, parent, false)
         return ViewHolder(view)
     }
 
@@ -35,7 +34,7 @@ class SitiosAdapter(
 
         fun bind(puntos: Puntos) {
             nameTextView.text = puntos.name
-            scoreTextView.text = puntos.score.toString()
+            scoreTextView.text = puntos.score
             descriptionTextView.text = puntos.description
             //picture
 
