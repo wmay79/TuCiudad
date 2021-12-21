@@ -38,28 +38,33 @@ class ListSitiosActivity2 : AppCompatActivity() {
             Puntos(
                 name = "Cristo Rey",
                 score = "4.0",
-                description = "Estatua de 26 metros de altura ubicada en el Cerro los Cristales a 1440 msnm en el corregimiento Los Andes, al occidente de la ciudad de Santiago de Cali"
+                description = "Estatua de 26 metros de altura ubicada en el Cerro los Cristales a 1440 msnm en el corregimiento Los Andes, al occidente de la ciudad de Santiago de Cali",
+                 urlpictures = "https://chipviajero.com/wp-content/uploads/2018/10/Como-llegar-al-Cristo-Rey-Cali-Buga-Chip-Viajero-6.jpg"
             ),
 
             Puntos(
                 name = "Zoológico de Cali",
                 score = "4.5",
-                description = "Cuenta con alrededor de 350 animales de 233 especies,1 entre anfibios (7%), mamíferos (21%), reptiles (12%), aves (30%), peces (21%) y mariposas (9%)"
+                description = "Cuenta con alrededor de 350 animales de 233 especies,1 entre anfibios (7%), mamíferos (21%), reptiles (12%), aves (30%), peces (21%) y mariposas (9%)",
+                urlpictures ="https://www.kienyke.com/sites/default/files/2020-05/Zoologico-de-Cali.jpg"
             ),
             Puntos(
                 name = "Museo la Tertulia",
                 score = "4.0",
-                description = "Es un museo de arte, el primero de arte moderno y con la colección de obras en soporte de papel más importante del país "
+                description = "Es un museo de arte, el primero de arte moderno y con la colección de obras en soporte de papel más importante del país ",
+                urlpictures ="https://upload.wikimedia.org/wikipedia/commons/b/b5/La_Tertulia_7-05-2015_06.JPG"
             ),
             Puntos(
                 name = "Iglesia de la Ermita",
                 score = "4.0",
-                description = "Templo católico dedicada a Nuestra Señora de la Soledad y al Señor de la Caña"
+                description = "Templo católico dedicada a Nuestra Señora de la Soledad y al Señor de la Caña",
+                urlpictures = "https://www.ecured.cu/images/f/f7/Iglesia_La_Ermita_-_Cali.jpg"
             ),
             Puntos(
                 name = "Capilla de San Antonio",
                 score = "4.0",
-                description = "Tipo barroco, se encuentra ubicada en la Colina de San Antonio en Santiago de Cali, Colombia"
+                description = "Tipo barroco, se encuentra ubicada en la Colina de San Antonio en Santiago de Cali, Colombia",
+                urlpictures ="https://www.ecured.cu/images/f/f7/Iglesia_La_Ermita_-_Cali.jpg"
             ),
 
 

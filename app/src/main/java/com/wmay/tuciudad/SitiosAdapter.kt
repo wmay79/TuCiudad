@@ -36,7 +36,7 @@ class SitiosAdapter(
             nameTextView.text = puntos.name
             scoreTextView.text = puntos.score
             descriptionTextView.text = puntos.description
-            //picture
+            Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(imageView);
 
         }
     }
