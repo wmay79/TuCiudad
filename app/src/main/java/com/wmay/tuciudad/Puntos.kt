@@ -1,8 +1,8 @@
 package com.wmay.tuciudad
 
 data class Puntos (
-    val nombre: String,
-    val puntuacion: Float,
-    val descripcion: String,
-    val foto: Int
+    val name: String,
+    val score: Float,
+    val description: String,
+    val pictures: Int
     )
