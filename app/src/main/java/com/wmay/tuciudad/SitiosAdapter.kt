@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class SitiosAdapter(
-    private val sitiosList: ArrayList<Puntos>
+    private val sitiosList: ArrayList<PuntosItem>
 ) : RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
 
 
@@ -33,7 +33,7 @@ class SitiosAdapter(
         private var descriptionTextView: TextView = itemView.findViewById(R.id.description_textView)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_imageView)
 
-        fun bind(puntos: Puntos) {
+        fun bind(puntos: PuntosItem) {
             nameTextView.text = puntos.name
             scoreTextView.text = puntos.score
             descriptionTextView.text = puntos.description

@@ -8,7 +8,7 @@ import com.google.gson.Gson
 
 class ListSitiosActivity2 : AppCompatActivity() {
 
-    private lateinit var ListSitios: ArrayList<Puntos>
+    private lateinit var ListSitios: ArrayList<PuntosItem>
     private lateinit var sitiosAdapter: SitiosAdapter
     private lateinit var List_sitios_recycler_view: RecyclerView
 
@@ -30,14 +30,15 @@ class ListSitiosActivity2 : AppCompatActivity() {
 
     }
 
-    private fun loadMocksitiosFromJson(): ArrayList<Puntos> {
+    private fun loadMocksitiosFromJson(): ArrayList<PuntosItem> {
 
         var sitiosString: String = applicationContext.assets.open("sitios.json").bufferedReader().use {it.readText()}
         val gson = Gson()
         val data = gson.fromJson(sitiosString,Puntos::class.java)
+        return data
     }
 
-    private fun crearMockPuntos(): ArrayList<Puntos> { //Mock prueba internet
+   /* private fun crearMockPuntos(): ArrayList<Puntos> { //Mock prueba internet
 
 
         return arrayListOf(
@@ -75,6 +76,6 @@ class ListSitiosActivity2 : AppCompatActivity() {
 
 
             )
-    }
+    }*/
 
 }
