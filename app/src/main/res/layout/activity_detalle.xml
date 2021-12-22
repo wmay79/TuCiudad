@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".MainActivity">
+        tools:context=".detalle.DetalleActivity">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/main_textView"
             style="@style/Texto_titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/pictures_tyimageView"
             android:layout_width="0dp"
             android:layout_height="400dp"
             android:layout_marginStart="8dp"
@@ -34,25 +34,26 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/main_textView"
             app:srcCompat="@drawable/santiagodecalipanoramica" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/label_textView"
             style="@style/Texto_normal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
             android:text="@string/informaciom"
             android:textColor="#00838F"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.102"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/pictures_tyimageView" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/description_textView"
             style="@style/Texto_normal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -62,7 +63,31 @@
             android:text="@string/informacion_cali"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/label_textView" />
+
+        <TextView
+            android:id="@+id/labelpuntaje_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/puntaje"
+            app:layout_constraintStart_toEndOf="@+id/label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/pictures_tyimageView" />
+
+        <TextView
+            android:id="@+id/score_textView"
+            style="@style/Texto_normal"
+            android:layout_width="40dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/score_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.423"
+            app:layout_constraintStart_toEndOf="@+id/labelpuntaje_textView2"
+            app:layout_constraintTop_toBottomOf="@+id/pictures_tyimageView" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.wmay.tuciudad
+package com.wmay.tuciudad.List
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import com.wmay.tuciudad.R
+import com.wmay.tuciudad.model.PuntosItem
 
 class SitiosAdapter(
-    private val sitiosList: ArrayList<PuntosItem>
+    private val sitiosList: ArrayList<PuntosItem>,
+    private  val onItemClicked: (PuntosItem) -> Unit,
 ) : RecyclerView.Adapter<SitiosAdapter.ViewHolder>() {
 
 
@@ -20,6 +23,7 @@ class SitiosAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val puntos = sitiosList[position]
+        holder.itemView.setOnClickListener { onItemClicked(sitiosList[position])}
         holder.bind(puntos)
     }
 

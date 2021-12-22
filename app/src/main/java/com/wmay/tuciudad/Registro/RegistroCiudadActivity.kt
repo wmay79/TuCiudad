@@ -1,4 +1,4 @@
-package com.wmay.tuciudad
+package com.wmay.tuciudad.Registro
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
+import com.wmay.tuciudad.detalle.DetalleActivity
+import com.wmay.tuciudad.R
+import com.wmay.tuciudad.model.Puntos
 
 class RegistroCiudadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +29,7 @@ class RegistroCiudadActivity : AppCompatActivity() {
 
             val punto = Puntos (nombre, puntuacion, descripcion, )
 
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, DetalleActivity::class.java)
             intent.putExtra("nombre",nombre)
             startActivity(intent)
         }

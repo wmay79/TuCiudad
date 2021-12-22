@@ -1,4 +1,4 @@
-package com.wmay.tuciudad
+package com.wmay.tuciudad.model
 
 
 import com.google.gson.annotations.SerializedName

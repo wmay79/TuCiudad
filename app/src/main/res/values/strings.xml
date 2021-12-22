@@ -11,4 +11,6 @@
     <string name="iglesia_san_antonio_text_view">Capilla San Antonio</string>
     <string name="descripcion_sitio_text_view">Tipo barroco, se encuentra ubicada en la Colina de San Antonio en Santiago de Cali, Colombia</string>
     <string name="puntuacion_text_view">Puntuación: 4.0</string>
+    <string name="puntaje">Puntaje</string>
+    <string name="score_text">4.2</string>
 </resources>

@@ -1,10 +1,13 @@
-package com.wmay.tuciudad
+package com.wmay.tuciudad.List
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.wmay.tuciudad.R
+import com.wmay.tuciudad.model.Puntos
+import com.wmay.tuciudad.model.PuntosItem
 
 class ListSitiosActivity2 : AppCompatActivity() {
 
@@ -20,7 +23,7 @@ class ListSitiosActivity2 : AppCompatActivity() {
 
      //   ListSitios = crearMockPuntos()
         ListSitios = loadMocksitiosFromJson()
-        sitiosAdapter = SitiosAdapter(ListSitios)
+        sitiosAdapter = SitiosAdapter(ListSitios, onItemClicked ={ onSitiosClicked(it) } )
 
         List_sitios_recycler_view.apply {
             layoutManager = LinearLayoutManager(context)        //conexion a internet
@@ -30,11 +33,15 @@ class ListSitiosActivity2 : AppCompatActivity() {
 
     }
 
+    private fun onSitiosClicked(puntos: PuntosItem) {
+
+    }
+
     private fun loadMocksitiosFromJson(): ArrayList<PuntosItem> {
 
-        var sitiosString: String = applicationContext.assets.open("sitios.json").bufferedReader().use {it.readText()}
+        val sitiosString: String = applicationContext.assets.open("sitios.json").bufferedReader().use {it.readText()}
         val gson = Gson()
-        val data = gson.fromJson(sitiosString,Puntos::class.java)
+        val data = gson.fromJson(sitiosString, Puntos::class.java)
         return data
     }
 
