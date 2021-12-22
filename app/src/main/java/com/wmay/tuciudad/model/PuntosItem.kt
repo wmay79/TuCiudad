@@ -2,6 +2,7 @@ package com.wmay.tuciudad.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class PuntosItem(
     @SerializedName("description")
@@ -14,4 +15,4 @@ data class PuntosItem(
     val score: String,
     @SerializedName("urlpictures")
     val urlpictures: String
-)
+) : Serializable

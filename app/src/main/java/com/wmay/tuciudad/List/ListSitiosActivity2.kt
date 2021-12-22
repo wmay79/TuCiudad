@@ -1,11 +1,13 @@
 package com.wmay.tuciudad.List
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.wmay.tuciudad.R
+import com.wmay.tuciudad.detalle.DetalleActivity
 import com.wmay.tuciudad.model.Puntos
 import com.wmay.tuciudad.model.PuntosItem
 
@@ -34,7 +36,9 @@ class ListSitiosActivity2 : AppCompatActivity() {
     }
 
     private fun onSitiosClicked(puntos: PuntosItem) {
-
+        val intent = Intent( this,DetalleActivity::class.java)
+        intent.putExtra("puntos",puntos)
+        startActivity(intent)
     }
 
     private fun loadMocksitiosFromJson(): ArrayList<PuntosItem> {

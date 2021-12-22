@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.widget.TextView
 import com.wmay.tuciudad.R
 import com.wmay.tuciudad.databinding.ActivityDetalleBinding
+import com.wmay.tuciudad.model.PuntosItem
 
 class DetalleActivity : AppCompatActivity() {
 
@@ -15,10 +16,10 @@ class DetalleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        detalleBinding = ActivityDetalleBinding.inflate(layoutInflater)
+       setContentView(detalleBinding.root)
 
-
-        val nombre = intent.extras?.getString("nombre")
-        detalleBinding.mainTextView.text = nombre
+        val puntos = PuntosItem = intent.extras?getSerializable("puntos") as PuntosItem
+        detalleBinding.mainTextView.text = PuntosItem
 
 
     }
